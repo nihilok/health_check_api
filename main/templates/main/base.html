@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
 
   <!-- My stylesheets -->
-  <link rel="stylesheet" type="text/css" href="{% static 'main/main.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
 
   <!-- Meta tags -->
   <title>CuidadorCo{% block title %}{% endblock title %}</title>
@@ -24,21 +24,6 @@
     <meta name="description" content="The home of digital healthcare. Online mentoring and freelance digital transformation consultancy.">
   {% endblock meta %}
 
-  <!-- Conditional background styling -->
-  <style type="text/css">
-    {% if info_page %}
-      body {
-        background: #b8b8b8;
-      }
-    {% else %}
-      body {
-        background: url("{% static 'main/img/mask@0,33x.jpg' %}") center center no-repeat fixed;
-        background-size: cover;
-      }
-    {% endif %}
-
-    {% block style %}{% endblock style %}
-  </style>
 </head>
 <body>
 <header class="site-header">
@@ -94,7 +79,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- My javascript -->
-<script src="{% static 'main/main.js' %}"></script>
+<script src="{% static 'main/js/main.js' %}"></script>
 
 <!-- Extra scripts block -->
 {% block scripts %}{% endblock scripts %}

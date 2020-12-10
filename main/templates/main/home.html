@@ -2,9 +2,9 @@
 {% load crispy_forms_tags %}
 {% block title %}Home{% endblock title %}
 {% block content %}
-<div class="row justify-content-around bg-light my-5 py-5 rounded shadow-lg">
-  <div class="col col-sm-10 col-md-8">
-    <h1 class="border-bottom mb-3">Ready for your Health Check?</h1>
+<div class="row justify-content-around bg-light py-md-3 rounded shadow-lg">
+  <h1 class="border-bottom mb-3">Ready for your Health Check?</h1>
+  <div class="col col-sm-10 col-md-8 my-auto order-2 order-md-1">
     <form method="POST">
       {% csrf_token %}
       <fieldset class="form-group">
@@ -19,7 +19,7 @@
       </div>
     </form>
   </div>
-  <div class="col-lg-3 bg-white my-auto py-4 shadow-sm">
+  <div class="col-lg-3 bg-white my-md-auto mb-4 mt-0 mx-2 py-4 shadow order-1 order-md-2">
     <h4><span style="font-weight: 700">Name:</span> {{ user.first_name }} {{ user.last_name }}</h4>
     <h4><span style="font-weight: 700">NHS no:</span> {{ user.NHS_no }}</h4>
     <h4><span style="font-weight: 700">Email:</span> {{ user.email }}</h4>

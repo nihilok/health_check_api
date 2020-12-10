@@ -24,3 +24,10 @@ class HealthCheckForm(forms.ModelForm):
     class Meta:
         model = HealthCheck
         fields = ['age', 'height', 'weight', 'smoking', 'alcohol']
+        help_texts = {
+            'age': 'How old are you in years?',
+            'height': 'Your height in centimetres.',
+            'weight': 'Your weight in kilograms.',
+            'smoking': 'How many cigarettes do you smoke per day?',
+            'alcohol': 'How many units of alcohol do you consume per week?',
+        }
