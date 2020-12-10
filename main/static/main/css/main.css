@@ -1,0 +1,14 @@
+html, body {
+	min-height: 100%;
+}
+
+.login-form {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.large-form {
+	margin-left: .5rem;
+	margin-right: .5rem;
+}
+
