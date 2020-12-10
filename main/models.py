@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import ugettext_lazy
 from main.managers import CustomUserManager
+from django.utils import timezone
 
 
 class User(AbstractUser):
@@ -26,3 +27,8 @@ class HealthCheck(models.Model):
     weight = models.SmallIntegerField()
     smoking = models.SmallIntegerField()
     alcohol = models.SmallIntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_created=True, default=timezone.now())
+
+    def __str__(self):
+        return f'{self.user.first_name} {self.user.last_name} {self.date}'                    
